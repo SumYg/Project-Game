@@ -2,6 +2,7 @@
 # Team Members
 Name: 
 
-Name: Yeung Sum(SumYg) UID: 3035683150
+Name: Yeung Sum(SumYg)
+UID: 3035683150
 
 # Game Description
