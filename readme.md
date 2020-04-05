@@ -19,7 +19,8 @@ The drawn cards are stored in a string seperated by spaces.
 ### Dynamic memory management
 
 ### File input/output
-The winner message of each game(when there is more than 1 player win the game) is output to a file. In the end, when there is only 1 winner, the winners of each game and the final winner will be shown to the screen.
+The winner message of each game(when there is more than 1 player win the game) is output to a file. In the end, when there is only 1 winner, the winners of each game and the final winner will be shown to the screen. The number of games won by respective players are also shown.
+
 ### Program codes in multiple files
 There are three main parts in this program, initialization(i.e. input of the number of players and their names), game stage and checking for the winners/final winner after 6 rounds of the game(if there is only 1 player wins, print out the winning message, otherwise return to the game stage).
 
