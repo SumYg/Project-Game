@@ -13,7 +13,7 @@ Players are given a random number from 1 to 10 at the beginning.
 
 When playing the card game, the cards are also drawn from the card pool randomly.
 ### Data structures for storing game status
-The name and hand of players ,as well as the number of games won are stored in an array of structures.
+The name(<string> type) and hand of players(<string> type), as well as the number of games won(<int> type) are stored in an array of structures.
 
 The drawn cards are stored in a string seperated by spaces.
 ### Dynamic memory management
