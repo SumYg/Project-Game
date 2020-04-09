@@ -13,15 +13,15 @@ Players are given a random number from 1 to 10 at the beginning.
 
 When playing the card game, the cards are also drawn from the card pool randomly.
 ### Data structures for storing game status
-The name(string type) and hand of players(string type), as well as the number of games won(int type) are stored in an array of structures.
+The name (string type) and hand of players (linked list structure), as well as the number of games won (int type) are stored in an array of structures.
 
-The drawn cards are stored in a string seperated by spaces.
+The drawn cards and the order of player in the game are stored in 1D array and dynamic array respectively.
 ### Dynamic memory management
 
 ### File input/output
-The winner message of each game(when there is more than 1 player win the game) is output to a file. In the end, when there is only 1 winner, the winners of each game and the final winner will be shown to the screen. The number of games won by respective players are also shown.
+The winner message of each game (when there is more than 1 player win the game) is output to a file. In the end, when there is only 1 winner, the winners of each game and the final winner will be shown to the screen. The number of games won by respective players are also shown.
 
 ### Program codes in multiple files
-There are three main parts in this program, initialization(i.e. input of the number of players and their names), game stage and checking for the winners/final winner after 6 rounds of the game(if there is only 1 player wins, print out the winning message, otherwise return to the game stage).
+There are three main parts in this program, initialization (i.e. input of the number of players and their names), game stage and checking for the winners/final winner after 6 rounds of the game (if there is only 1 player wins, print out the winning message, otherwise return to the game stage).
 
 The codes corresponding to these three parts are separated into different files for better coding and debugging. Long functions may also be separated if necessary.
