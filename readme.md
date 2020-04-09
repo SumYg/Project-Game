@@ -17,7 +17,9 @@ The name (string type) and hand of players (linked list structure), as well as t
 
 The drawn cards and the order of player in the game are stored in 1D array and dynamic array respectively.
 ### Dynamic memory management
+The hand cards of each player are stored in linked list structure, each node stores 1 hand card and the address of the next code (last node points to NULL). When a player draws a card, a new node will be created and inserted at the end of the list. When a player discards a card, the corresponding node will be deleted and the list will be relinked, thus memory is released.
 
+The order of player is stored in a dynamic array since the number of players is subjected to change. The indexes of players in the array of structures are stored in this array sequentially according to the order decided at the beginning.
 ### File input/output
 The winner message of each game (when there is more than 1 player win the game) is output to a file. In the end, when there is only 1 winner, the winners of each game and the final winner will be shown to the screen. The number of games won by respective players are also shown.
 
