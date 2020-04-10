@@ -29,4 +29,4 @@ There are three main parts in this program, initialization (i.e. input of the nu
 The codes corresponding to these three parts are separated into different files for better coding and debugging. Long functions may also be separated if necessary.
 
 ## Remarks
-Some ideas of this card game come from Blackjack and Blitz.
+Some ideas of this card game come from Blackjack and Thirty-one.
