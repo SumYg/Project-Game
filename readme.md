@@ -17,7 +17,7 @@ The name (string type) and hand of players (linked list structure), as well as t
 
 The drawn cards and the order of player in the game are stored in dynamic arrays.
 ### Dynamic memory management
-The hand cards of each player are stored in a linked list structure, each node stores 1 hand card and the address of the next node (last node points to NULL). When a player draws a card, a new node will be created and inserted at the end of the list. When a player discards a card, the corresponding node will be deleted and the list will be relinked, thus memory is released.
+The hand cards of each player are stored in a linked list structure, each node stores 1 hand card. When a player draws a card, a new node will be created and inserted at the end of the list. When a player discards a card, the corresponding node will be deleted and the list will be relinked, thus memory is released.
 
 The order of player and drawn cards are stored in dynamic arrays since the sizes of the array are subjected to change. The indexes of players in the array of structures are stored in the array sequentially according to the order decided at the beginning.
 ### File input/output
@@ -27,3 +27,6 @@ The winner message of each game (when there is more than 1 player win the game) 
 There are three main parts in this program, initialization (i.e. input of the number of players and their names), game stage and checking for the winners/final winner after 6 rounds of the game (if there is only 1 player wins, print out the winning message, otherwise return to the game stage).
 
 The codes corresponding to these three parts are separated into different files for better coding and debugging. Long functions may also be separated if necessary.
+
+## Remarks
+Some ideas of this card game come from Blackjack and Blitz.
