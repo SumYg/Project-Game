@@ -27,7 +27,7 @@ int main() {
   }
   initialization(palyers);
   gamestage(palyers);
-  if (result(palyers)) {
+  while (result(palyers)) {
     initialization(palyers);
     gamestage(palyers);
   }
