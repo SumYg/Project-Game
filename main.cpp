@@ -2,6 +2,8 @@
 #include <initialization.h>
 #include <gamestage.h>
 #include <result.h>
+#include <string>
+#include <fstream>
 using namespace std;
 
 struct Node {
