@@ -27,11 +27,12 @@ int main() {
   for (int i; i < n; i++) {
     cin >> palyers[i].name;
   }
-  initialization(palyers);
-  gamestage(palyers);
-  while (result(palyers)) {
-    initialization(palyers);
-    gamestage(palyers);
+  int *order = new int [n];
+  initialization(palyers, order);
+  gamestage(palyers, order);
+  while (result(palyers, n)) {
+    initialization(palyers, order);
+    gamestage(palyers, order);
   }
 
   return 0;
