@@ -12,6 +12,9 @@ void gamestage(int n, struct Palyers* palyers, int* order) {
   else
     cards=39;
   int *cardcheck= new int [cards];
+  for (int i=0;i<cards;i++){
+    cardcheck[i]=0;
+  }
   for (int i=0;i<6;i++){
     for (int j=0;j<n;j++){
       
