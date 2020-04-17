@@ -28,6 +28,8 @@ int main() {
     cin >> palyers[i].name;
   }
   int *order;
+  initialization(n, palyers, order);
+  gamestage(palyers, order)
   while (result(palyers, order)) {
     initialization(n, palyers, order);
     gamestage(palyers, order);
