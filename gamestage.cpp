@@ -23,5 +23,6 @@ void gamestage(int n, struct Palyers* palyers, int* order) {
         int random=rand()%cards;
         while (cardcheck[random] != 0)
           random=rand()%cards;
+        cardcheck[random]=1;
   
   
