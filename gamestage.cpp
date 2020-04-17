@@ -8,9 +8,9 @@ void gamestage(int n, struct Palyers* palyers, int* order) {
   srand(time(NULL));
   int cards;
   if (n==2)
-  cards=26;
+    cards=26;
   else
-  cards=39;
+    cards=39;
   int *cardcheck= new int [cards];
   for (int i=0;i<6;i++){
     for (int j=0;j<n;j++){
@@ -20,5 +20,8 @@ void gamestage(int n, struct Palyers* palyers, int* order) {
       cout<<"Enter 2 to discard a card "<<endl;
       cin>>option;
       if (option==1){
+        int random=rand()%cards;
+        while (cardcheck[random] != 0)
+          random=rand()%cards;
   
   
