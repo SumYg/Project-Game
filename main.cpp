@@ -31,7 +31,7 @@ int main() {
   
   while (result(palyers, order)) {
     initialization(n, palyers, order);
-    gamestage(palyers, order);
+    gamestage(n, palyers, order);
   }
 
   return 0;
