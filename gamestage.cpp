@@ -18,7 +18,7 @@ void gamestage(int n, struct Palyers* palyers, int* order) {
   for (int i=0;i<6;i++){
     for (int j=0;j<n;j++){
       
-      cout<< palyers[order[i]].name << ", choose one of the following option: "<<endl;
+      cout<< palyers[order[j]].name << ", choose one of the following option: "<<endl;
       cout<<"Enter 1 to draw a card "<<endl;
       cout<<"Enter 2 to discard a card "<<endl;
       cin>>option;
