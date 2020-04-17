@@ -29,7 +29,7 @@ int main() {
   }
   int *order;
   while (result(palyers, order)) {
-    initialization(palyers, order);
+    initialization(n, palyers, order);
     gamestage(palyers, order);
   }
 
