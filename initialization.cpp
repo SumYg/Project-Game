@@ -35,7 +35,7 @@ void initialization(int n, struct Palyers* palyers, int* order) {
     randomnum[random] = 1;
     num[i] = random + 1;
     cout << palyers[order[i]].name << ": " << num[i] << endl;
-  }
+  }// distribute random cards to all the players to determine their order
   int *new_num = new int [n], *temp_order = new int [n];
   for (int i = 0; i < n; ++i) {
     new_num[i] = num[i];
