@@ -22,7 +22,7 @@ int find(int target, int* list, int n) {
 }// find target in the given array
 
 void initialization(int n, struct Palyers* palyers, int* order) {
-  int randomnum[10] = {};
+  bool randomnum[10] = {};
   srand(time(NULL));
   int *num = new int [n];
   /*for (int i=0; i<n;i++)
