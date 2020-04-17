@@ -34,7 +34,7 @@ int initialization(int n, struct Players* palyers, int* order) {
       random = rand() %10;
     randomnum[random] = 1;
     num[i] = random + 1;
-    cout << palyers[order[i]].name << ": " << num[order[i]] << endl;
+    cout << palyers[order[i]].name << ": " << num[i] << endl;
   }
   int *new_num = new int [n], *temp_order = new int [n];
   for (int i = 0; i < n; ++i) {
