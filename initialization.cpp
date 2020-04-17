@@ -21,7 +21,7 @@ int find(int target, int* list, int n) {
   return -1;
 }// find target in the given array
 
-int initialization(int n, struct Players* palyers, int* order) {
+void initialization(int n, struct Palyers* palyers, int* order) {
   int randomnum[10] = {};
   srand(time(NULL));
   int *num = new int [n];
@@ -40,7 +40,7 @@ int initialization(int n, struct Players* palyers, int* order) {
   for (int i = 0; i < n; ++i) {
     new_num[i] = num[i];
     temp_order[i] = order[i];
-  }
+  }//replicate arrays
   sorted(new_num, n);
   for (int i = 0; i < n; ++i)
     order[i] = temp_order[find(new_num[i], num, n)];
@@ -48,6 +48,5 @@ int initialization(int n, struct Players* palyers, int* order) {
   for (int i = 0; i < n; ++i)
     cout << palyers[order[i]].name << ((i < n-1)? " >> ": "\n");
   delete[] num, new_num, temp_order;
-  // give random numbers to players
-  return 0;
+  // give random numbers to players and update the order 
 }
