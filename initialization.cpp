@@ -25,8 +25,8 @@ void initialization(int n, struct Palyers* palyers, int* order) {
   int randomnum[10] = {};
   srand(time(NULL));
   int *num = new int [n];
-  for (int i=0; i<n;i++)
-    cin >> order[i];
+  /*for (int i=0; i<n;i++)
+    cin >> order[i]; */
   cout << "Drawing random cards......." << endl;
   for (int i=0; i< n; ++i) {
     int random = rand() %10;
