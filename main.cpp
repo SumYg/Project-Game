@@ -23,7 +23,7 @@ int main() {
   cout << "Welcome to group 87 game!" << endl;
   cout << "Please enter the number of players: ";
   cin >> n;
-  cout << "Please enter your names seperated by space:" << endl;
+  cout << "Please enter your names seperated by space: " << endl;
   for (int i; i < n; i++) {
     cin >> palyers[i].name;
   }
