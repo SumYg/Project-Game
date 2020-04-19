@@ -3,7 +3,7 @@
 #include <ctime>
 using namespace std;
 
-void insert_card(int number, unsigned index, struct Palyers *palyers) {
+void insert_card(int number, int index, struct Palyers *palyers) {
   if (palyers[index].handcards.card == 87)
     palyers[index].handcards.card = number;
   else {
