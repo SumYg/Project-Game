@@ -6,6 +6,7 @@ using namespace std;
 void insert_card(int number, int index, struct Palyers *palyers) {
   if (palyers[index].tail == NULL) {
     palyers[index].handcards.card = number;
+    palyers[index].handcards.next = NULL;
     palyers[index].tail = &palyers[index].handcards;
   }
   else {
@@ -17,11 +18,26 @@ void insert_card(int number, int index, struct Palyers *palyers) {
   }
 }
 
+char transform(int num) {
+  switch (num) {
+    case 1:
+      return 'A';
+    case 11:
+      return 'J';
+    case 12:
+      return 'Q';
+    case 13:
+      return 'K';
+    default:
+      return (char) num + 48;
+  }
+}
+
 void print_hand(int index, Palyers *palyers) {
   cout <<  "Your current hand cards:" << endl;
   if (palyers[index].tail != NULL) 
     for (Node *head = &palyers[index].handcards; head != NULL; head = head->next)
-      cout << head->card << ' ';
+      cout << transform(head->card) << ' ';
   cout << endl;
 }
 
