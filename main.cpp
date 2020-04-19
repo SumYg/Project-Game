@@ -15,6 +15,7 @@ struct Palyers {
   string name;
   int won;
   Node handcards;
+  Node *tail;
 };
 
 int main() {
@@ -28,7 +29,7 @@ int main() {
     cin >> palyers[i].name;
   }
   int *order;
-  
+
   while (result(palyers, order)) {
     initialization(n, palyers, order);
     gamestage(n, palyers, order);
