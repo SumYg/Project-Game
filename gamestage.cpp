@@ -18,18 +18,18 @@ void insert_card(int number, int index, struct Palyers *palyers) {
   }
 }
 
-char transform(int num) {
+string transform(int num) {
   switch (num) {
     case 1:
-      return 'A';
+      return "A";
     case 11:
-      return 'J';
+      return "J";
     case 12:
-      return 'Q';
+      return "Q";
     case 13:
-      return 'K';
+      return "K";
     default:
-      return (char) num + 48;
+      return to_string(num);
   }
 }
 
