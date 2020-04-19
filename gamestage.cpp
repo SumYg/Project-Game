@@ -25,7 +25,7 @@ void print_hand(int index, Palyers *palyers) {
       cout << head->card << ' ';
       head = head->next;
     }
-   }
+  }
   cout << endl;
 }
 
