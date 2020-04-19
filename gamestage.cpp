@@ -20,7 +20,7 @@ void insert_card(int number, int index, struct Palyers *palyers) {
 void print_hand(int index, Palyers *palyers) {
   cout <<  "Your current hand cards:" << endl;
   if (palyers[index].tail != NULL) 
-    for (Node *head = & palyers[index].handcards; head != NULL; head = head->next)
+    for (Node *head = &palyers[index].handcards; head != NULL; head = head->next)
       cout << head->card << ' ';
   cout << endl;
 }
@@ -51,4 +51,4 @@ void gamestage(int n, struct Palyers* palyers, int* order) {
         while (cardcheck[random] != 0)
           random=rand()%cards;
         cardcheck[random]=1;
-        insert_card(random+1, order[j], palyers);
+        insert_card(random % 13+1, order[j], palyers);
