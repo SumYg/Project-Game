@@ -56,4 +56,3 @@ void gamestage(int n, struct Palyers* palyers, int* order) {
           random=rand()%cards;
         cardcheck[random]=1;
         insert_card(random, order[j], palyers);
-        print_hand(order[j], palyers);
