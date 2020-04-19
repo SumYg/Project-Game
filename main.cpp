@@ -20,7 +20,7 @@ struct Palyers {
 
 int main() {
   Palyers palyers[4];
-  int n;
+  int n, *order;
   cout << "Welcome to group 87 game!" << endl;
   cout << "Please enter the number of players: ";
   cin >> n;
@@ -29,7 +29,6 @@ int main() {
     cin >> palyers[i].name;
     palyers[i].won = 0;
   }
-  int *order;
 
   while (result(palyers, order)) {
     initialization(n, palyers, order);
