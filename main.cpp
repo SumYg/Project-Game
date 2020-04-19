@@ -27,6 +27,7 @@ int main() {
   cout << "Please enter your names seperated by space: " << endl;
   for (int i; i < n; i++) {
     cin >> palyers[i].name;
+    palyers[i].won = 0;
   }
   int *order;
 
