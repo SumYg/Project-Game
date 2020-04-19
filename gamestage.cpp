@@ -56,4 +56,4 @@ void gamestage(int n, struct Palyers* palyers, int* order) {
         while (cardcheck[random] != 0)
           random=rand()%cards;
         cardcheck[random]=1;
-        insert_card(random, order[j], palyers);
+        insert_card(random+1, order[j], palyers);
