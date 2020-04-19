@@ -4,16 +4,16 @@
 using namespace std;
 
 void insert_card(int number, int index, struct Palyers *palyers) {
-  if (palyers[index].handcards.card == 87)
+  if (palyers[index].tail == NULL) {
     palyers[index].handcards.card = number;
+    palyers[index].tail = &palyers[index].handcards;
+  }
   else {
     Node *p = new Node;
     p->next = NULL;
     p->card = number;
-    Node *head = &palyers[index].handcards;
-    while (head->next != NULL)
-      head = head->next;
-    head->next = p;
+    palyers[index].tail->next =p;
+    palyers[index].tail =p;
   }
 }
 
