@@ -17,6 +17,19 @@ void insert_card(int number, int index, struct Palyers *palyers) {
   }
 }
 
+void print_hand(int index, Palyers *palyers) {
+  if (palyers[index].tail == NULL)
+    cout << endl;
+  else {
+    Node *head = & palyers[index].handcards;
+    while (head != NULL) {
+      cout << head->card << ' ';
+      head = head->next;
+    }
+    cout << endl;
+  }
+}
+
 void gamestage(int n, struct Palyers* palyers, int* order) {
   int option;
   srand(time(NULL));
