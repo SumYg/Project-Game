@@ -19,7 +19,7 @@ void insert_card(int number, int index, struct Palyers *palyers) {
 
 void print_hand(int index, Palyers *palyers) {
   cout <<  "Your current hand cards:" << endl;
-  if (palyers[index].tail == NULL) {
+  if (palyers[index].tail != NULL) {
     Node *head = & palyers[index].handcards;
     while (head != NULL) {
       cout << head->card << ' ';
