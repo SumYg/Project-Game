@@ -19,6 +19,18 @@ void insert_card(int number, int index, struct Palyers *palyers) {
   }
 }
 
+Node * find(Node *handcards,int discard){
+  Node * current=handcards;
+  while (current !=NULL){
+    if (current.hand == discard)
+      return current;
+    else
+      current=current.next;}
+  return NULL;
+}
+      
+    
+
 string transform(int num) {
   // this function is to transform the number to a correct symbol for the cards
   switch (num) {
@@ -69,23 +81,36 @@ void gamestage(int n, struct Palyers* palyers, int* order) {
         cout<<"Invalid option, please input your option again. "<<endl;
         cout<<"Enter 1 to draw a card "<<endl;
         cout<<"Enter 2 to discard a card "<<endl;
-        cin>>option;}
+        cin>>option;
+      }
       while (i==0 && option==2){
         cout<<"Invalid option, please input your option again. "<<endl;
         cout<<"Enter 1 to draw a card "<<endl;
         cout<<"Enter 2 to discard a card "<<endl;
-        cin>>option;}
+        cin>>option;
+      }
       if (option==1){
         int random=rand()%cards;
         while (cardcheck[random] != 0)
           random=rand()%cards;
         cardcheck[random]=1;
-        insert_card(random % 13+1, order[j], palyers);}
-      
+        insert_card(random % 13+1, order[j], palyers);
+      }
       else if (option == 2){
         int discard;
         cout<<"Please enter the card you want to discard :";
         cin>>discard;
-        while
+        while (find(palyers[order[j]].handcards, discard)==NULL){
+          cout<<"Incorrect input, please enter the card you want to discard again"<<endl;
+          cin>>discard;
+        }
+        
+      }
       
+      
+      
+        
+    }
+  }  
 delete[] cardcheck;}
+    
