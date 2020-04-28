@@ -99,10 +99,9 @@ void gamestage(int n, struct Palyers* palyers, int* order) {
       
       cout<< palyers[order[j]].name << ", choose one of the following option: "<<endl;
       cout<<"Enter 1 to draw a card "<<endl;
-      if (i != 0) {
-        cout<<"Enter 2 to discard a card "<<endl;
+      cout<<"Enter 2 to discard a card "<<endl;
+      if (i != 0) 
         print_hand(order[j], palyers);
-      }
       cin>>option;
       while (option !=1 && option !=2 || palyers[order[j]].tail == NULL && option ==2){
         cout<<"Invalid option, please input your option again. "<<endl;
