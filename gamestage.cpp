@@ -31,7 +31,7 @@ Node * find(Node *handcards,string discard){
   return NULL;// return null if not found
 }
       
-void delete_card(Node * handcards, string discard){
+void delete_card(Node * handcards, string discard,int index,struct Palyers * palyers){
   // this function is to discard a chosen card from a player's hand
   Node * current=handcards;
   while (current!=NULL){
@@ -45,6 +45,9 @@ void delete_card(Node * handcards, string discard){
         Node *p = current->next;
         current->next=p->next;
         delete p;
+        if (current->next->next==NULL){
+          palyers[index].tail->current;
+        }
         return ;
       }
       else{
@@ -127,7 +130,7 @@ void gamestage(int n, struct Palyers* palyers, int* order) {
           cout<<"Incorrect input, please enter the card you want to discard again"<<endl;
           cin>>discard;
         }
-        delete_card(&palyers[order[j]].handcards, discard);
+        delete_card(&palyers[order[j]].handcards, discard,order[j], palyers);
       }
       print_hand(order[j], palyers);
       cout << endl;      
