@@ -1,6 +1,7 @@
 #include <iostream>
 #include <ctime>
 #include <unistd.h>
+#include "palyer.h"
 using namespace std;
 
 void sorted(int* num, int n) {
@@ -30,7 +31,7 @@ void initialization(int n, Palyers* palyers, int* order) {
     cin >> order[i]; */
   cout << "Drawing random cards......." << endl;
   for (int i=0; i< n; ++i) {
-    sleep(0.87);
+    sleep(1);
     int random = rand() %10;
     while (randomnum[random] !=0)
       random = rand() %10;
