@@ -31,28 +31,26 @@ Node * find(Node *handcards,string discard){
   return NULL;// return null if not found
 }
       
-void delete_card(Node * handcards, string discard,int index,struct Palyers * palyers){
-  // this function is to discard a chosen card from a player's hand
+void delete_card(Node * &handcards, Node * &tail, string discard){
   Node * current=handcards;
-  while (current!=NULL){
-    if (handcards->hand == discard){
-      handcards=handcards->next;
-      delete current;
+  if (current->hand == discard){
+    handcards = handcards->next;
+    if (tail == current)
+      tail = tail->next;
+    delete current;
+    return;
+  }
+  while (current->next != NULL){
+    if (current->next->hand == discard){
+      if (current->next == tail)
+        tail = current;
+      Node *p = current->next;
+      current->next=p->next;
+      delete p;
       return ;
     }
     else{
-      if (current->next->hand == discard){
-        Node *p = current->next;
-        current->next=p->next;
-        delete p;
-        if (current->next->next==NULL){
-          palyers[index].tail->current;
-        }
-        return ;
-      }
-      else{
-        current=current->next;
-      }
+      current=current->next;
     }
   }
 }
