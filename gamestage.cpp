@@ -30,7 +30,29 @@ Node * find(Node *handcards,int discard){
   return NULL;// return null if not found
 }
       
-    
+int delete_card(Node * &handcards, int discard){
+  Node * current=handcards;
+  while (current!=NULL){
+    if (handcards.hand == discard){
+      handcards=handcards.next;
+      delete current;
+      return 0;
+    }
+    else{
+      if (current.next == discard){
+        Node *p = current.next;
+        current.next=p.next;
+        delete p;
+        return 0;
+      }
+      else{
+        current=current.next;
+      }
+    }
+  }
+  return 0;}
+        
+      
 
 string transform(int num) {
   // this function is to transform the number to a correct symbol for the cards
@@ -87,20 +109,22 @@ void gamestage(int n, struct Palyers* palyers, int* order) {
       }
       if (option==1){
         int random=rand()%cards;
+        cout<<"Drawing a card......"<<endl;
         while (cardcheck[random] != 0)
           random=rand()%cards;
         cardcheck[random]=1;
         insert_card(random % 13+1, order[j], palyers);
+        cout<<"You draw "<<transform(random%13+1)<<endl;
       }
       else if (option == 2){
         int discard;
         cout<<"Please enter the card you want to discard :";
         cin>>discard;
-        while (find(＆palyers[order[j]].handcards, discard)==NULL){
+        while (find(&palyers[order[j]].handcards, discard)==NULL){
           cout<<"Incorrect input, please enter the card you want to discard again"<<endl;
           cin>>discard;
         }
-        
+        delete_card(&palyers[order[j]].handcards, discard);
       }
       
       
