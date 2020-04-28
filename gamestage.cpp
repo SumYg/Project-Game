@@ -20,7 +20,7 @@ void insert_card(int number, int index, struct Palyers *palyers) {
   }
 }
 
-Node * find(Node *handcards,int discard){
+Node * find(Node *handcards,string discard){
   // this function is to find the pointer pointing to the discarded card in the player's hand
   Node * current=handcards;
   while (current !=NULL){
@@ -31,7 +31,7 @@ Node * find(Node *handcards,int discard){
   return NULL;// return null if not found
 }
       
-void delete_card(Node * handcards, int discard){
+void delete_card(Node * handcards, string discard){
   // this function is to discard a chosen card from a player's hand
   Node * current=handcards;
   while (current!=NULL){
@@ -120,7 +120,7 @@ void gamestage(int n, struct Palyers* palyers, int* order) {
         cout<<"You draw "<<transform(random%13+1)<<endl;
       }
       else if (option == 2){
-        int discard;
+        string discard;
         cout<<"Please enter the card you want to discard :";
         cin>>discard;
         while (find(&palyers[order[j]].handcards, discard)==NULL){
