@@ -101,7 +101,7 @@ void gamestage(int n, struct Palyers* palyers, int* order) {
         cout<<"Enter 2 to discard a card "<<endl;
       }
       cin>>option;
-      while (options !=1 && option !=2 || palyers[order[j]].tail == NULL && option ==2){
+      while (option !=1 && option !=2 || palyers[order[j]].tail == NULL && option ==2){
         cout<<"Invalid option, please input your option again. "<<endl;
         cout<<"Enter 1 to draw a card "<<endl;
         cout<<"Enter 2 to discard a card "<<endl;
