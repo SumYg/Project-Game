@@ -32,6 +32,7 @@ Node * find(Node *handcards,string discard){
 }
       
 void delete_card(Node * &handcards, Node * &tail, string discard){
+  // this fumction is to delete a certain card from a player's hand
   Node * current=handcards;
   if (current->hand == discard){
     handcards = handcards->next;
