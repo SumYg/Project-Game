@@ -4,7 +4,7 @@ STRUCT = palyer.h
 initialization.o: initialization.cpp $(STRUCT)
 	g++ $(FLAGS) -c $<
 
-main.o: main.cpp initialization.h $(STRUCT)
+main.o: main.cpp functions.h $(STRUCT)
 	g++ $(FLAGS) -c $<
 
 main: main.o initialization.o
