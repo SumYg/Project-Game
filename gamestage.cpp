@@ -33,6 +33,7 @@ Node * find(Node *handcards,int discard){
 }
       
 void delete_card(Node * handcards, int discard){
+  // this function is used to discard a chosen card from a player's hand
   Node * current=handcards;
   while (current!=NULL){
     if (handcards->hand == discard){
