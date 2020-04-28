@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <ctime>
+#include "palyer.h"
 using namespace std;
 
 void insert_card(int number, int index, struct Palyers *palyers) {
