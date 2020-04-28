@@ -36,6 +36,11 @@ void result(int n, struct Palyers* palyers, int* order) {
     int point=calculate_mark(palyers[order[i]].handcards);
     cout<<palyers[order[i]].name<<"'s hand cards have "<<point<<" points"<<endl;
     if (point==27){
+      winner+=1
       cout<<"You win this round!!"<<endl;
       palyers[order[i]].won+=1;
+      fout<<palyers[order[i]].name<<" wins round "<<palyers[order[i]].won<<endl;
     }
+  }
+  if (winner!=1)
+  
