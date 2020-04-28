@@ -6,7 +6,7 @@
 using namespace std;
 
 void insert_card(int number, int index, struct Palyers *palyers) {
-  // this function is used to add a card to a player's hand
+  // this function is to add a card to a player's hand
   if (palyers[index].tail == NULL) {
     palyers[index].handcards.hand = number;
     palyers[index].handcards.next = NULL;
@@ -33,7 +33,7 @@ Node * find(Node *handcards,int discard){
 }
       
 void delete_card(Node * handcards, int discard){
-  // this function is used to discard a chosen card from a player's hand
+  // this function is to discard a chosen card from a player's hand
   Node * current=handcards;
   while (current!=NULL){
     if (handcards->hand == discard){
@@ -74,7 +74,7 @@ string transform(int num) {
 }
 
 void print_hand(int index, Palyers *palyers) {
-  // this function print the hand of the player
+  // this function prints the hand of the player
   cout <<  "Your current hand cards:" << endl;
   if (palyers[index].tail != NULL) 
     for (Node *head = &palyers[index].handcards; head != NULL; head = head->next)
