@@ -2,7 +2,7 @@
 #define PALYER_H
 
 struct Node {
-  int hand;
+  std::string hand;
   Node *next;
 };
 
