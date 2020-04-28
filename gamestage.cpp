@@ -20,14 +20,14 @@ void insert_card(int number, int index, struct Palyers *palyers) {
 }
 
 Node * find(Node *handcards,int discard){
-  // this function is to find the pointer pointing to the discard card in player's hand
+  // this function is to find the pointer pointing to the discarded card in the player's hand
   Node * current=handcards;
   while (current !=NULL){
     if (current.hand == discard)
       return current;
     else
       current=current.next;}
-  return NULL;
+  return NULL;// return null if not found
 }
       
     
