@@ -5,7 +5,7 @@
 #include <unistd.h>
 using namespace std;
 
-void insert_card(int number, int index, struct Palyers *palyers) {
+void insert_card(string number, int index, struct Palyers *palyers) {
   // this function is to add a card to a player's hand
   Node *p = new Node;
   p->next = NULL;
@@ -115,7 +115,7 @@ void gamestage(int n, struct Palyers* palyers, int* order) {
         while (cardcheck[random] != 0)
           random=rand()%cards;
         cardcheck[random]=1;
-        insert_card(random % 13+1, order[j], palyers);
+        insert_card(transform(random % 13+1), order[j], palyers);
         usleep(500000);
         cout<<"You draw "<<transform(random%13+1)<<endl;
       }
