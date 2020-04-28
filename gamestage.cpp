@@ -94,7 +94,7 @@ void gamestage(int n, struct Palyers* palyers, int* order) {
         int discard;
         cout<<"Please enter the card you want to discard :";
         cin>>discard;
-        while (find(palyers[order[j]].handcards, discard)==NULL){
+        while (find(＆palyers[order[j]].handcards, discard)==NULL){
           cout<<"Incorrect input, please enter the card you want to discard again"<<endl;
           cin>>discard;
         }
