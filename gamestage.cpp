@@ -2,6 +2,7 @@
 #include <string>
 #include <ctime>
 #include "palyer.h"
+#include <unistd.h>
 using namespace std;
 
 void insert_card(int number, int index, struct Palyers *palyers) {
@@ -115,6 +116,7 @@ void gamestage(int n, struct Palyers* palyers, int* order) {
           random=rand()%cards;
         cardcheck[random]=1;
         insert_card(random % 13+1, order[j], palyers);
+        usleep(500000);
         cout<<"You draw "<<transform(random%13+1)<<endl;
       }
       else if (option == 2){
