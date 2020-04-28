@@ -77,7 +77,7 @@ void print_hand(int index, Palyers *palyers) {
   cout <<  "Your current hand cards:" << endl;
   if (palyers[index].tail != NULL) 
     for (Node *head = &palyers[index].handcards; head != NULL; head = head->next)
-      cout << transform(head->hand) << ' ';
+      cout << head->hand << ' ';
   cout << endl;
 }
 
