@@ -7,15 +7,14 @@ using namespace std;
 
 void insert_card(int number, int index, struct Palyers *palyers) {
   // this function is to add a card to a player's hand
+  Node *p = new Node;
+  p->next = NULL;
+  p->hand = number;
   if (palyers[index].tail == NULL) {
-    palyers[index].handcards.hand = number;
-    palyers[index].handcards.next = NULL;
-    palyers[index].tail = &palyers[index].handcards;
+    palyers[index].handcards = p;
+    palyers[index].tail = p;
   }
   else {
-    Node *p = new Node;
-    p->next = NULL;
-    p->hand = number;
     palyers[index].tail->next =p;
     palyers[index].tail =p;
   }
