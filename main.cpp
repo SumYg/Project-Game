@@ -1,7 +1,6 @@
 #include <iostream>
-#include <initialization.h>
-#include <gamestage.h>
-#include <result.h>
+#include "functions.h"
+#include "palyer.h"
 #include <string>
 #include <fstream>
 using namespace std;
