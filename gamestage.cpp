@@ -23,34 +23,34 @@ Node * find(Node *handcards,int discard){
   // this function is to find the pointer pointing to the discarded card in the player's hand
   Node * current=handcards;
   while (current !=NULL){
-    if (current.hand == discard)
+    if (current->hand == discard)
       return current;
     else
-      current=current.next;}
+      current=current->next;}
   return NULL;// return null if not found
 }
       
-int delete_card(Node * &handcards, int discard){
+void delete_card(Node * handcards, int discard){
   Node * current=handcards;
   while (current!=NULL){
-    if (handcards.hand == discard){
-      handcards=handcards.next;
+    if (handcards->hand == discard){
+      handcards=handcards->next;
       delete current;
-      return 0;
+      return ;
     }
     else{
-      if (current.next == discard){
-        Node *p = current.next;
-        current.next=p.next;
+      if (current->next->hand == discard){
+        Node *p = current->next;
+        current->next=p->next;
         delete p;
-        return 0;
+        return ;
       }
       else{
-        current=current.next;
+        current=current->next;
       }
     }
   }
-  return 0;}
+}
         
       
 
@@ -126,8 +126,8 @@ void gamestage(int n, struct Palyers* palyers, int* order) {
         }
         delete_card(&palyers[order[j]].handcards, discard);
       }
-      
-      
+      print_hand(order[j], palyers);
+      cout << endl;      
       
         
     }
