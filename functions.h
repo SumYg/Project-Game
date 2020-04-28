@@ -1,5 +1,5 @@
-#ifndef INITIALIZATION_H
-#define INITIALIZATION_H
+#ifndef INITIALIZATION
+#define INITIALIZATION
 
 struct Palyers;
 
