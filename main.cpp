@@ -17,7 +17,7 @@ int main() {
     palyers[i].won = 0;
   }
 
-  while (result(palyers, order)) {
+  while (result(n,palyers, order)) {
     initialization(n, palyers, order);
     gamestage(n, palyers, order);
   }
