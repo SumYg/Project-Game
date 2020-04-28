@@ -111,6 +111,7 @@ void gamestage(int n, struct Palyers* palyers, int* order) {
         cin>>option;
       }
       if (option==1){
+        // if players choose to draw a card
         int random=rand()%cards;
         cout<<"Drawing a card......"<<endl;
         while (cardcheck[random] != 0)
@@ -121,6 +122,7 @@ void gamestage(int n, struct Palyers* palyers, int* order) {
         cout<<"You draw "<<transform(random%13+1)<<endl;
       }
       else if (option == 2){
+        // if players choose to discard a card
         string discard;
         cout<<"Please enter the card you want to discard :";
         cin>>discard;
