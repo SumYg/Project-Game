@@ -1,7 +1,7 @@
 FLAGS = -pedantic-errors -std=c++11
 STRUCT = palyer.h
 
-initialization.o: initialization.cpp initialization.h $(STRUCT)
+initialization.o: initialization.cpp $(STRUCT)
 	g++ $(FLAGS) -c $<
 
 main.o: main.cpp initialization.h $(STRUCT)
