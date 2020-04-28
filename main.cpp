@@ -5,18 +5,6 @@
 #include <fstream>
 using namespace std;
 
-struct Node {
-  int hand;
-  Node *next;
-};
-
-struct Palyers {
-  string name;
-  int won;
-  Node handcards;
-  Node *tail;
-};
-
 int main() {
   Palyers palyers[4];
   int n, *order;
