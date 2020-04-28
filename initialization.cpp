@@ -1,6 +1,5 @@
 #include <iostream>
 #include <ctime>
-#include <Windows.h>
 #include <unistd.h>
 using namespace std;
 
@@ -31,7 +30,7 @@ void initialization(int n, struct Palyers* palyers, int* order) {
     cin >> order[i]; */
   cout << "Drawing random cards......." << endl;
   for (int i=0; i< n; ++i) {
-    sleep(1);
+    sleep(0.87);
     int random = rand() %10;
     while (randomnum[random] !=0)
       random = rand() %10;
