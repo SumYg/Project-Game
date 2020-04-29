@@ -56,8 +56,6 @@ void delete_card(Node * &handcards, Node * &tail, string discard){
   }
 }
 
-
-
 string transform(int num) {
   // this function is to transform the number to a correct symbol for the cards
   switch (num) {
@@ -95,9 +93,9 @@ void gamestage(int n, Palyers* palyers, int* order) {
   for (int i=0;i<cards;i++){
     cardcheck[i]=0;
   }
+  
   for (int i=0;i<6;i++){
     for (int j=0;j<n;j++){
-
       cout<< palyers[order[j]].name << ", choose one of the following option: "<<endl;
       cout<<"Enter 1 to draw a card "<<endl;
       cout<<"Enter 2 to discard a card "<<endl;
@@ -134,8 +132,8 @@ void gamestage(int n, Palyers* palyers, int* order) {
       }
       print_hand(order[j], palyers);
       cout << endl;
-      
-
+      usleep(870000);
     }
   }
-delete[] cardcheck;}
+  delete[] cardcheck;
+}
