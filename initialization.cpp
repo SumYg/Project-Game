@@ -51,6 +51,7 @@ void initialization(int n, Palyers* palyers, int* order) {
     cout << palyers[order[i]].name << ((i < n-1)? " >> ": "\n");
     palyers[order[i]].tail = NULL;
   }
+  sleep(1);
   delete[] num, new_num, temp_order;
   // give random numbers to players and update the order
 }
