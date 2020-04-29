@@ -29,7 +29,7 @@ int calculate_mark(Node *handcards){
   }
   return point;
 }
-void result(int &n, Palyers* palyers, int* order,int round) {
+bool result(int &n, Palyers* palyers, int* order,int round) {
   ofstream fout;
   fout.open("result.txt", ios::app);
   string finalwinner;
