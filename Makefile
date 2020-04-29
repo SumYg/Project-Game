@@ -6,7 +6,7 @@ initialization.o: initialization.cpp $(STRUCT)
 
 gamestage.o: gamestage.cpp $(STRUCT)
 	g++ $(FLAGS) -c $<
-	
+
 result.o: result.cpp $(STRUCT)
 	g++ $(FLAGS) -c $<
 
@@ -20,6 +20,6 @@ tar:
 	tar -czvf project.tgz *.cpp *.h
 
 clean:
-	rm -f main main.o initialization.o project.tgz
+	rm -f main main.o initialization.o result.o gamestage.o result.txt project.tgz
 
 .PHONY: clean tar

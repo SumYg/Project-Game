@@ -38,6 +38,7 @@ void initialization(int n, Palyers* palyers, int* order) {
     cout << palyers[order[i]].name << ": " << num[i] << endl;
   }// distribute random cards to all the players to determine their order
   sleep(1);
+  cout << endl;
   int *new_num = new int [n], *temp_order = new int [n];
   for (int i = 0; i < n; ++i) {
     new_num[i] = num[i];

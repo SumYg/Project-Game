@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <fstream>
+#include <unistd.h>
 #include "palyer.h"
 using namespace std;
 
@@ -14,7 +15,7 @@ int transform1(string num) {
       return 12;
   if (num == "K")
       return 13;
-  
+
   return stoi(num);
 }
 int calculate_mark(Node *handcards){
@@ -26,6 +27,10 @@ int calculate_mark(Node *handcards){
     current=current->next;
   }
   return point;
+}
+void coutwin(string namelist) {
+   cout << "Winners of this round:" << endl;
+   cout << namelist << endl;
 }
 bool result(int &n, Palyers* palyers, int* order,int round) {
   ofstream fout;
@@ -41,6 +46,7 @@ bool result(int &n, Palyers* palyers, int* order,int round) {
       palyers[order[i]].won+=1;
       finalwinner += palyers[order[i]].name + ", ";
     }
+    usleep(870000);
   }
   if (winner > 1) {
     finalwinner.pop_back();
@@ -62,7 +68,7 @@ bool result(int &n, Palyers* palyers, int* order,int round) {
         ifstream fin;
         fin.open("result.txt");
         while (getline(fin, finalwinner))
-          cout << finalwinner;
+          cout << finalwinner << endl;
         fin.close();
         cout<<palyers[order[i]].name<<" is the final winner!! Congratulation !!"<<endl;
         return false;
@@ -89,13 +95,13 @@ bool result(int &n, Palyers* palyers, int* order,int round) {
       for (int i=0;i<n;i++){
         order[i]=order1[i];
       }
-      
+      coutwin(finalwinner);
       return true;
     }
-  } 
-      
-      
-  
+  }
+
+
+
   if (winner == 3){
     if (n==3){
       cout<<"All players wins this round"<<endl;
@@ -116,20 +122,15 @@ bool result(int &n, Palyers* palyers, int* order,int round) {
       for (int i=0;i<n;i++){
         order[i]=order2[i];
       }
-      
+      coutwin(finalwinner);
       return true;
     }
   }
   if (winner==4){
-    
+
     cout<<"All players wins this round"<<endl;
     cout<<"It is a draw for this round"<<endl;
     fout<<"Round "<<round<<" is a draw"<<endl;
     return true;
   }
 }
-
-      
-      
-   
-  
