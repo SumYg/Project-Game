@@ -7,7 +7,7 @@ using namespace std;
 
 int main() {
   Palyers palyers[4];
-  int n, *order,round=0;
+  int n, *order, round=0;
   cout << "Welcome to group 87 game!" << endl;
   cout << "Please enter the number of players: ";
   cin >> n;
@@ -15,7 +15,7 @@ int main() {
   for (int i = 0; i < n; i++)
     cin >> palyers[i].name;
 
-  while (result(n,palyers, order)) {
+  while (result(n,palyers, order,round)) {
     round+=1;
     initialization(n, palyers, order);
     gamestage(n, palyers, order);
