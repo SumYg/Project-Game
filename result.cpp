@@ -31,7 +31,7 @@ int calculate_mark(Node *handcards){
 }
 void result(int &n, Palyers* palyers, int* order,int round) {
   ofstream fout;
-  fout.open("result.txt");
+  fout.open("result.txt", ios::app);
   string finalwinner;
   int winner=0;
   for (int i=0;i<n;i++){
@@ -41,8 +41,13 @@ void result(int &n, Palyers* palyers, int* order,int round) {
       winner+=1
       cout<<"You win this round!!"<<endl;
       palyers[order[i]].won+=1;
-      fout<<palyers[order[i]].name<<" wins round "<<palyers[order[i]].won<<endl;
+      finalwinner += palyers[order[i]].name + ", ";
     }
+  }
+  if (winner > 1) {
+    finalwinner.pop_back();
+    finalwinner.pop_back();
+    fout << finalwinner <<" win round "<< round << endl;
   }
   if (winner==0){
     for (int i=0;i<n;i++){
@@ -56,8 +61,12 @@ void result(int &n, Palyers* palyers, int* order,int round) {
   if (winner==1){
     for (int i=0;i<n;i++){
       if (palyers[order[i]].won==round){
+        ifstream fin;
+        fin.open("result.txt");
+        while (getline(fin, finalwinner))
+          cout << finalwinner;
+        fin.close();
         cout<<palyers[order[i]].name<<" is the final winner!! Congratulation !!"<<endl;
-        fout<<palyers[order[i]].name<<" is the final winner!!"<<endl;
         return false;
       }
     }
