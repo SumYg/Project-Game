@@ -13,13 +13,12 @@ int main() {
   cin >> n;
   int *order= new int [n];
   
-  for (int i=0;i<n;i++){
-    order[i]=i;
-  }
   
   cout << "Please enter your names seperated by space: " << endl;
-  for (int i = 0; i < n; i++)
+  for (int i = 0; i < n; i++) {
     cin >> palyers[i].name;
+    order[i]=i;
+  }
   initialization(n, palyers, order);
   gamestage(n, palyers, order);
   while (result(n,palyers, order,round)) {
