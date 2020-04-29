@@ -9,8 +9,8 @@ struct Node {
 struct Palyers {
   std::string name;
   int won=0;
-  Node handcards;
-  Node *tail;
+  Node *handcards=NULL;
+  Node *tail=NULL;
 };
 
 #endif
