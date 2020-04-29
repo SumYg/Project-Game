@@ -6,11 +6,14 @@ initialization.o: initialization.cpp $(STRUCT)
 
 gamestage.o: gamestage.cpp $(STRUCT)
 	g++ $(FLAGS) -c $<
+	
+result.o: result.cpp $(STRUCT)
+	g++ $(FLAGS) -c $<
 
 main.o: main.cpp functions.h $(STRUCT)
 	g++ $(FLAGS) -c $<
 
-main: main.o initialization.o gamestage.o
+main: main.o initialization.o gamestage.o result.o
 	g++ $(FLAGS) $^ -o $@
 
 tar:
