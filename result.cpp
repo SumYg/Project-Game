@@ -22,7 +22,7 @@ int calculate_mark(Node *handcards){
   Node *current=handcards;
   int point=0;
   while (current!=NULL){
-    score+=transform1(current->hand);
+    point+=transform1(current->hand);
     current=current->next;
   }
   return point;
