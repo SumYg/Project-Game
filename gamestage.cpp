@@ -30,7 +30,7 @@ Node * find(Node *handcards,string discard){
       current=current->next;}
   return NULL;// return null if not found
 }
-      
+
 void delete_card(Node * &handcards, Node * &tail, string discard){
   // this fumction is to delete a certain card from a player's hand
   Node * current=handcards;
@@ -55,8 +55,8 @@ void delete_card(Node * &handcards, Node * &tail, string discard){
     }
   }
 }
-        
-      
+
+
 
 string transform(int num) {
   // this function is to transform the number to a correct symbol for the cards
@@ -77,7 +77,7 @@ string transform(int num) {
 void print_hand(int index, Palyers *palyers) {
   // this function prints the hand of the player
   cout <<  "Your current hand cards:" << endl;
-  if (palyers[index].tail != NULL) 
+  if (palyers[index].tail != NULL)
     for (Node *head = palyers[index].handcards; head != NULL; head = head->next)
       cout << head->hand << ' ';
   cout << endl;
@@ -97,11 +97,11 @@ void gamestage(int n, Palyers* palyers, int* order) {
   }
   for (int i=0;i<6;i++){
     for (int j=0;j<n;j++){
-      
+
       cout<< palyers[order[j]].name << ", choose one of the following option: "<<endl;
       cout<<"Enter 1 to draw a card "<<endl;
       cout<<"Enter 2 to discard a card "<<endl;
-      if (i != 0) 
+      if (i != 0)
         print_hand(order[j], palyers);
       cin>>option;
       while (option !=1 && option !=2 || palyers[order[j]].tail == NULL && option ==2){
@@ -126,17 +126,16 @@ void gamestage(int n, Palyers* palyers, int* order) {
         string discard;
         cout<<"Please enter the card you want to discard :";
         cin>>discard;
-        while (find(&palyers[order[j]].handcards, discard)==NULL){
+        while (find(palyers[order[j]].handcards, discard)==NULL){
           cout<<"Incorrect input, please enter the card you want to discard again"<<endl;
           cin>>discard;
         }
-        delete_card(&palyers[order[j]].handcards, discard,order[j], palyers);
+        delete_card(palyers[order[j]].handcards, palyers[order[j]].tail, discard);
       }
       print_hand(order[j], palyers);
-      cout << endl;      
+      cout <<endl;
       
-        
+
     }
-  }  
+  }
 delete[] cardcheck;}
-    
