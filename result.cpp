@@ -5,6 +5,14 @@
 #include "palyer.h"
 using namespace std;
 
+void deletehand(Node * &handcards){
+  while (handcards!=NULL){
+    Node *p= handcards;
+    handcards=handcards->next;
+    delete p;
+  }
+}
+
 int transform1(string num) {
   // this function is to transform the cards to a score
   if (num == "A")
@@ -56,10 +64,12 @@ bool result(int &n, Palyers* palyers, int* order,int round) {
   if (winner==0){
     for (int i=0;i<n;i++){
       palyers[order[i]].won+=1;
+      deletehand(palyers[order[i]].handcards);
     }
     cout<<"No one wins this round"<<endl;
     cout<<"It is a draw for this round"<<endl;
     fout<<"Round "<<round<<" is a draw"<<endl;
+    
     return true;
   }
   if (winner==1){
@@ -80,6 +90,9 @@ bool result(int &n, Palyers* palyers, int* order,int round) {
       cout<<"All players wins this round"<<endl;
       cout<<"It is a draw for this round"<<endl;
       fout<<"Round "<<round<<" is a draw"<<endl;
+      for (int i=0;i<n;i++){
+        deletehand(palyers[order[i]].handcards);
+      }
       return true;
     }
     else{
@@ -91,11 +104,15 @@ bool result(int &n, Palyers* palyers, int* order,int round) {
           n1+=1;
         }
       }
+      for (int i=0;i<n;i++){
+        deletehand(palyers[order[i]].handcards);
+      }
       n=2;
       for (int i=0;i<n;i++){
         order[i]=order1[i];
       }
       coutwin(finalwinner);
+      
       return true;
     }
   }
@@ -107,6 +124,9 @@ bool result(int &n, Palyers* palyers, int* order,int round) {
       cout<<"All players wins this round"<<endl;
       cout<<"It is a draw for this round"<<endl;
       fout<<"Round "<<round<<" is a draw"<<endl;
+      for (int i=0;i<n;i++){
+        deletehand(palyers[order[i]].handcards);
+      }
       return true;
     }
     else{
@@ -117,6 +137,9 @@ bool result(int &n, Palyers* palyers, int* order,int round) {
           order2[n1]=order[i];
           n1+=1;
         }
+      }
+      for (int i=0;i<n;i++){
+        deletehand(palyers[order[i]].handcards);
       }
       n=3;
       for (int i=0;i<n;i++){
@@ -131,6 +154,9 @@ bool result(int &n, Palyers* palyers, int* order,int round) {
     cout<<"All players wins this round"<<endl;
     cout<<"It is a draw for this round"<<endl;
     fout<<"Round "<<round<<" is a draw"<<endl;
+    for (int i=0;i<n;i++){
+        deletehand(palyers[order[i]].handcards);
+    }
     return true;
   }
 }
