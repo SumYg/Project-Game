@@ -26,6 +26,6 @@ int main() {
     initialization(n, palyers, order);
     gamestage(n, palyers, order);
   }
-
+  delete[] order;
   return 0;
 }
