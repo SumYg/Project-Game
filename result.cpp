@@ -72,10 +72,55 @@ void result(int &n, Palyers* palyers, int* order,int round) {
     }
   }
   if (winner == 2){
-    return true;
-  }
+    if (n==2){
+      cout<<"All players wins this round"<<endl;
+      cout<<"It is a draw for this round"<<endl;
+      fout<<"Round "<<round<<" is a draw"<<endl;
+      return true;
+    }
+    else{
+      int *order1= new int [n];
+      int n1=0;
+      for (int i=0;i<n;i++){
+        if (calculate_mark(palyers[order[i]].handcards)==27){
+          order1[n1]=order[i];
+          n1+=1;
+        }
+      }
+      n=2;
+      for (int i=0;i<n;i++){
+        order[i]=order1[i];
+      }
+      delete[] order1;
+      return true;
+    }
+  } 
+      
+      
+  
   if (winner == 3){
-    return true;
+    if (n==3){
+      cout<<"All players wins this round"<<endl;
+      cout<<"It is a draw for this round"<<endl;
+      fout<<"Round "<<round<<" is a draw"<<endl;
+      return true;
+    }
+    else{
+      int *order1= new int [n];
+      int n1=0;
+      for (int i=0;i<n;i++){
+        if (calculate_mark(palyers[order[i]].handcards)==27){
+          order1[n1]=order[i];
+          n1+=1;
+        }
+      }
+      n=3;
+      for (int i=0;i<n;i++){
+        order[i]=order1[i];
+      }
+      delete[] order1;
+      return true;
+    }
   }
   if (winner==4){
     
