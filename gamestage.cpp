@@ -133,7 +133,7 @@ void gamestage(int n, Palyers* palyers, int* order) {
         delete_card(palyers[order[j]].handcards, palyers[order[j]].tail, discard);
       }
       print_hand(order[j], palyers);
-      cout <<endl;
+      cout << endl;
       
 
     }

@@ -46,13 +46,36 @@ void result(int &n, Palyers* palyers, int* order,int round) {
     for (int i=0;i<n;i++){
       palyers[order[i]].won+=1;
     }
+    cout<<"No one wins this round"<<endl;
     cout<<"It is a draw for this round"<<endl;
+    fout<<"Round "<<round<<" is a draw"<<endl;
     return true;
   }
   if (winner==1){
-    
-    return false;
+    for (int i=0;i<n;i++){
+      if (palyers[order[i]].won==round){
+        cout<<palyers[order[i]].name<<" is the final winner!! Congratulation !!"<<endl;
+        fout<<palyers[order[i]].name<<" is the final winner!!"<<endl;
+        return false;
+      }
+    }
   }
   if (winner == 2){
+    return true;
+  }
+  if (winner == 3){
+    return true;
+  }
+  if (winner==4){
     
+    cout<<"All players wins this round"<<endl;
+    cout<<"It is a draw for this round"<<endl;
+    fout<<"Round "<<round<<" is a draw"<<endl;
+    return true;
+  }
+}
+
+      
+      
+   
   
