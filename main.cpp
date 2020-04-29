@@ -7,7 +7,7 @@ using namespace std;
 
 int main() {
   Palyers palyers[4];
-  int n, round=0;
+  int n, round=1;
   cout << "Welcome to group 87 game!" << endl;
   cout << "Please enter the number of players: ";
   cin >> n;
