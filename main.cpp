@@ -15,7 +15,7 @@ int main() {
   for (int i = 0; i < n; i++)
     cin >> palyers[i].name;
 
-  while (result(n,palyers, order)) {
+  while (result(n,palyers, order,round)) {
     round+=1;
     initialization(n, palyers, order);
     gamestage(n, palyers, order);
