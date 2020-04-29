@@ -5,7 +5,7 @@
 #include <unistd.h>
 using namespace std;
 
-void insert_card(string number, int index, struct Palyers *palyers) {
+void insert_card(string number, int index, Palyers *palyers) {
   // this function is to add a card to a player's hand
   Node *p = new Node;
   p->next = NULL;
