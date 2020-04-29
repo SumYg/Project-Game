@@ -27,7 +27,7 @@ int calculate_mark(Node *handcards){
   }
   return point;
 }
-void result(int n, struct Palyers* palyers, int* order) {
+void result(int n, Palyers* palyers, int* order) {
   ofstream fout;
   fout.open("result.txt");
   
