@@ -79,7 +79,7 @@ void result(int &n, Palyers* palyers, int* order,int round) {
       return true;
     }
     else{
-      int *order1= new int [n];
+      int order1[2];
       int n1=0;
       for (int i=0;i<n;i++){
         if (calculate_mark(palyers[order[i]].handcards)==27){
@@ -91,7 +91,7 @@ void result(int &n, Palyers* palyers, int* order,int round) {
       for (int i=0;i<n;i++){
         order[i]=order1[i];
       }
-      delete[] order1;
+      
       return true;
     }
   } 
@@ -106,19 +106,19 @@ void result(int &n, Palyers* palyers, int* order,int round) {
       return true;
     }
     else{
-      int *order1= new int [n];
+      int order2[3];
       int n1=0;
       for (int i=0;i<n;i++){
         if (calculate_mark(palyers[order[i]].handcards)==27){
-          order1[n1]=order[i];
+          order2[n1]=order[i];
           n1+=1;
         }
       }
       n=3;
       for (int i=0;i<n;i++){
-        order[i]=order1[i];
+        order[i]=order2[i];
       }
-      delete[] order1;
+      
       return true;
     }
   }
