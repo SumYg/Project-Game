@@ -27,10 +27,10 @@ int calculate_mark(Node *handcards){
   }
   return point;
 }
-void result(int n, Palyers* palyers, int* order) {
+void result(int &n, Palyers* palyers, int* order,int round) {
   ofstream fout;
   fout.open("result.txt");
-  
+  string finalwinner;
   int winner=0;
   for (int i=0;i<n;i++){
     int point=calculate_mark(palyers[order[i]].handcards);
@@ -42,5 +42,17 @@ void result(int n, Palyers* palyers, int* order) {
       fout<<palyers[order[i]].name<<" wins round "<<palyers[order[i]].won<<endl;
     }
   }
-  if (winner!=1)
+  if (winner==0){
+    for (int i=0;i<n;i++){
+      palyers[order[i]].won+=1;
+    }
+    cout<<"It is a draw for this round"<<endl;
+    return true;
+  }
+  if (winner==1){
+    
+    return false;
+  }
+  if (winner == 2){
+    
   
