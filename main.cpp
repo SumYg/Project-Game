@@ -7,10 +7,14 @@ using namespace std;
 
 int main() {
   Palyers palyers[4];
-  int n, *order, round=0;
+  int n, round=0;
   cout << "Welcome to group 87 game!" << endl;
   cout << "Please enter the number of players: ";
   cin >> n;
+  int *order= new int [n];
+  for (int i=0;i<n;i++){
+    order[i]=i;
+  }
   cout << "Please enter your names seperated by space: " << endl;
   for (int i = 0; i < n; i++)
     cin >> palyers[i].name;
