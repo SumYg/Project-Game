@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <fstream>
+#include "palyer.h"
 using namespace std;
 
 int transform1(string num) {
@@ -19,6 +20,7 @@ int transform1(string num) {
   }
 }
 int calculate_mark(Node *handcards){
+  // this function is to calculate the scores of players' handcards
   Node *current=handcards;
   int point=0;
   while (current!=NULL){
