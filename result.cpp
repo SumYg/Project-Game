@@ -6,18 +6,16 @@ using namespace std;
 
 int transform1(string num) {
   // this function is to transform the cards to a score
-  switch (num) {
-    case "A":
+  if (num == "A")
       return 1;
-    case "J":
+  if (num == "J")
       return 11;
-    case "Q":
+  if (num == "Q")
       return 12;
-    case "K":
+  if (num == "K")
       return 13;
-    default:
-      return stoi(num);
-  }
+  
+  return stoi(num);
 }
 int calculate_mark(Node *handcards){
   // this function is to calculate the scores of players' handcards
