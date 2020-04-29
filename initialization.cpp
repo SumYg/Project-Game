@@ -37,6 +37,7 @@ void initialization(int n, Palyers* palyers, int* order) {
     num[i] = random + 1;
     cout << palyers[order[i]].name << ": " << num[i] << endl;
   }// distribute random cards to all the players to determine their order
+  sleep(1);
   int *new_num = new int [n], *temp_order = new int [n];
   for (int i = 0; i < n; ++i) {
     new_num[i] = num[i];
@@ -47,6 +48,7 @@ void initialization(int n, Palyers* palyers, int* order) {
   for (int i = 0; i < n; ++i) {
     order[i] = temp_order[find(new_num[i], num, n)];
     cout << palyers[order[i]].name << ((i < n-1)? " >> ": "\n");
+    palyers[order[i]].tail = NULL;
   }
   delete[] num, new_num, temp_order;
   // give random numbers to players and update the order
