@@ -83,7 +83,7 @@ void print_hand(int index, Palyers *palyers) {
   cout << endl;
 }
 
-void gamestage(int n, struct Palyers* palyers, int* order) {
+void gamestage(int n, Palyers* palyers, int* order) {
   int option;
   srand(time(NULL));
   int cards;
