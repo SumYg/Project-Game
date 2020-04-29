@@ -69,7 +69,7 @@ bool result(int &n, Palyers* palyers, int* order,int round) {
     cout<<"No one wins this round"<<endl;
     cout<<"It is a draw for this round"<<endl;
     fout<<"Round "<<round<<" is a draw"<<endl;
-    
+    fout.close();
     return true;
   }
   if (winner==1){
@@ -80,6 +80,7 @@ bool result(int &n, Palyers* palyers, int* order,int round) {
         while (getline(fin, finalwinner))
           cout << finalwinner << endl;
         fin.close();
+        fout.close();
         cout<<palyers[order[i]].name<<" is the final winner!! Congratulation !!"<<endl;
         return false;
       }
@@ -93,6 +94,7 @@ bool result(int &n, Palyers* palyers, int* order,int round) {
       for (int i=0;i<n;i++){
         deletehand(palyers[order[i]].handcards);
       }
+      fout.close();
       return true;
     }
     else{
@@ -112,7 +114,7 @@ bool result(int &n, Palyers* palyers, int* order,int round) {
         order[i]=order1[i];
       }
       coutwin(finalwinner);
-      
+      fout.close();
       return true;
     }
   }
@@ -127,6 +129,7 @@ bool result(int &n, Palyers* palyers, int* order,int round) {
       for (int i=0;i<n;i++){
         deletehand(palyers[order[i]].handcards);
       }
+      fout.close();
       return true;
     }
     else{
@@ -146,6 +149,7 @@ bool result(int &n, Palyers* palyers, int* order,int round) {
         order[i]=order2[i];
       }
       coutwin(finalwinner);
+      fout.close();
       return true;
     }
   }
@@ -157,6 +161,7 @@ bool result(int &n, Palyers* palyers, int* order,int round) {
     for (int i=0;i<n;i++){
         deletehand(palyers[order[i]].handcards);
     }
+    fout.close();
     return true;
   }
 }
