@@ -73,8 +73,8 @@ string transform(int num) {
 }
 
 void print_hand(int index, Palyers *palyers) {
-  // this function output the hand of the player 
-  cout <<  "Your current hand cards:" << endl;
+  // this function output the hand of the player
+  cout <<  "Your current hand cards: ";
   if (palyers[index].tail != NULL)
     for (Node *head = palyers[index].handcards; head != NULL; head = head->next)
       cout << head->hand << ' ';
@@ -96,7 +96,7 @@ void gamestage(int n, Palyers* palyers, int* order) {
   for (int i=0;i<cards;i++){
     cardcheck[i]=0;
   }
-  
+
   for (int i=0;i<6;i++){
     for (int j=0;j<n;j++){
       cout<< palyers[order[j]].name << ", choose one of the following option: "<<endl;
@@ -121,6 +121,7 @@ void gamestage(int n, Palyers* palyers, int* order) {
         insert_card(transform(random % 13+1), order[j], palyers);
         usleep(500000);
         cout<<"You draw "<<transform(random%13+1)<<endl;
+        usleep(670000);
       }
       else if (option == 2){
         // if players choose to discard a card
