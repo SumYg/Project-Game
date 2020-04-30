@@ -6,7 +6,7 @@
 using namespace std;
 
 void insert_card(string number, int index, Palyers *palyers) {
-  // this function is to add a card to a player's hand and changes the players' handcards, nothing will be outputted 
+  // this function is to add a card to a player's hand and changes the players' handcards, nothing will be outputted or returned
   Node *p = new Node;
   p->next = NULL;
   p->hand = number;
@@ -21,7 +21,7 @@ void insert_card(string number, int index, Palyers *palyers) {
 }
 
 Node * find(Node *handcards,string discard){
-  // this function is to find the pointer pointing to the discarded card in the player's hand
+  // this function is to find the pointer pointing to the discarded card in the player's hand, it return the node if it can find one, otherwise it return NULL
   Node * current=handcards;
   while (current !=NULL){
     if (current->hand == discard)
