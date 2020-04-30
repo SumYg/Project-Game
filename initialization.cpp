@@ -54,5 +54,4 @@ void initialization(int n, Palyers* palyers, int* order) {
   }
   sleep(1);
   delete[] num, new_num, temp_order;
-  // give random numbers to players and update the order
 }
