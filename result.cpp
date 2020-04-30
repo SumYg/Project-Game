@@ -27,6 +27,7 @@ int transform1(string num) {
 
   return stoi(num);
 }
+
 int calculate_mark(Node *handcards){
   // this function is to calculate the scores of players' handcards by passing their handcards into this function, the point will 
   // be returned as integer
@@ -38,11 +39,13 @@ int calculate_mark(Node *handcards){
   }
   return point;
 }
+
 void coutwin(string namelist) {
-  // this function output the winner by passing a string into this function 
+   // this function output the winner by passing a string into this function 
    cout << "Winners of this round:" << endl;
    cout << namelist << endl;
 }
+
 bool result(int &n, Palyers* palyers, int* order,int round) {
   // this is the main function for the result part
   // this functions takes in the number of players (int &n), players' info (Palyers* palyers), order of players (int* order)and which round it is (int round)
@@ -64,11 +67,13 @@ bool result(int &n, Palyers* palyers, int* order,int round) {
     palyers[order[i]].tail = NULL;
     usleep(870000);
   }
+  
   if (winner > 1) {
     finalwinner.pop_back();
     finalwinner.pop_back();
     fout << finalwinner <<" win round "<< round << endl;
   }
+  
   if (winner==0){
     for (int i=0;i<n;i++){
       palyers[order[i]].won+=1;
@@ -80,6 +85,7 @@ bool result(int &n, Palyers* palyers, int* order,int round) {
     fout.close();
     return true;
   }
+  
   if (winner==1){
     for (int i=0;i<n;i++){
       if (palyers[order[i]].won==round){
@@ -94,6 +100,7 @@ bool result(int &n, Palyers* palyers, int* order,int round) {
       }
     }
   }
+  
   if (winner == 2){
     if (n==2){
       cout<<"All players wins this round"<<endl;
@@ -127,8 +134,6 @@ bool result(int &n, Palyers* palyers, int* order,int round) {
     }
   }
 
-
-
   if (winner == 3){
     if (n==3){
       cout<<"All players wins this round"<<endl;
@@ -161,8 +166,8 @@ bool result(int &n, Palyers* palyers, int* order,int round) {
       return true;
     }
   }
+  
   if (winner==4){
-
     cout<<"All players wins this round"<<endl;
     cout<<"It is a draw for this round"<<endl;
     fout<<"Round "<<round<<" is a draw"<<endl;
