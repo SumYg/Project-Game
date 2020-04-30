@@ -6,7 +6,7 @@
 using namespace std;
 
 void deletehand(Node * &handcards){
-  // this function delete the handcards of a player by passing their handcards with references into this function 
+  // this function delete the handcards of a player by passing their handcards with references into this function
   while (handcards!=NULL){
     Node *p= handcards;
     handcards=handcards->next;
@@ -29,7 +29,7 @@ int transform1(string num) {
 }
 
 int calculate_mark(Node *handcards){
-  // this function is to calculate the scores of players' handcards by passing their handcards into this function, the point will 
+  // this function is to calculate the scores of players' handcards by passing their handcards into this function, the point will
   // be returned as integer
   Node *current=handcards;
   int point=0;
@@ -41,7 +41,7 @@ int calculate_mark(Node *handcards){
 }
 
 void coutwin(string namelist) {
-   // this function output the winner by passing a string into this function 
+   // this function output the winner by passing a string into this function
    cout << "Winners of this round:" << endl;
    cout << namelist << endl;
 }
@@ -67,13 +67,13 @@ bool result(int &n, Palyers* palyers, int* order,int round) {
     palyers[order[i]].tail = NULL;
     usleep(870000);
   }
-  
+
   if (winner > 1) {
     finalwinner.pop_back();
     finalwinner.pop_back();
     fout << finalwinner <<" win round "<< round << endl;
   }
-  
+
   if (winner==0){
     for (int i=0;i<n;i++){
       palyers[order[i]].won+=1;
@@ -85,25 +85,25 @@ bool result(int &n, Palyers* palyers, int* order,int round) {
     fout.close();
     return true;
   }
-  
+
   if (winner==1){
     for (int i=0;i<n;i++){
       if (palyers[order[i]].won==round){
-        fout<<palyers[order[i]]<<" wins round "<<round<<endl;
+        fout<<palyers[order[i]].name<<" wins round "<<round<<endl;
         fout<<palyers[order[i]].name<<" is the final winner!! Congratulation !!"<<endl;
         ifstream fin;
         fin.open("result.txt");
-        cout<<palyers[order[i]]<<" wins round "<<round<<endl;
+        cout<<palyers[order[i]].name<<" wins round "<<round<<endl;
         while (getline(fin, finalwinner))
           cout << finalwinner << endl;
         fin.close();
         fout.close();
-        
+
         return false;
       }
     }
   }
-  
+
   if (winner == 2){
     if (n==2){
       cout<<"All players wins this round"<<endl;
@@ -169,7 +169,7 @@ bool result(int &n, Palyers* palyers, int* order,int round) {
       return true;
     }
   }
-  
+
   if (winner==4){
     cout<<"All players wins this round"<<endl;
     cout<<"It is a draw for this round"<<endl;
