@@ -6,6 +6,7 @@
 using namespace std;
 
 void deletehand(Node * &handcards){
+  // this function delete the handcards of a player by passing their handcards with references into this function 
   while (handcards!=NULL){
     Node *p= handcards;
     handcards=handcards->next;
@@ -14,7 +15,7 @@ void deletehand(Node * &handcards){
 }
 
 int transform1(string num) {
-  // this function is to transform the cards to a score
+  // this function is to transform the cards to a score by passing a string into it, and the score will be returned as an integer
   if (num == "A")
       return 1;
   if (num == "J")
@@ -27,7 +28,8 @@ int transform1(string num) {
   return stoi(num);
 }
 int calculate_mark(Node *handcards){
-  // this function is to calculate the scores of players' handcards
+  // this function is to calculate the scores of players' handcards by passing their handcards into this function, the point will 
+  // be returned as integer
   Node *current=handcards;
   int point=0;
   while (current!=NULL){
@@ -37,10 +39,13 @@ int calculate_mark(Node *handcards){
   return point;
 }
 void coutwin(string namelist) {
+  // this function output the winner by passing a string into this function 
    cout << "Winners of this round:" << endl;
    cout << namelist << endl;
 }
 bool result(int &n, Palyers* palyers, int* order,int round) {
+  // this is the main function for the result part, this functions takes in the number of players (int &n), players' info (Palyers* palyers), order of players (int* order)and which round it is (int round)
+  // the main purpose of this function is to find out who wins the game/round and output it
   ofstream fout;
   fout.open("result.txt", ios::app);
   string finalwinner;
