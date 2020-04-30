@@ -47,6 +47,7 @@ bool result(int &n, Palyers* palyers, int* order,int round) {
   // this is the main function for the result part
   // this functions takes in the number of players (int &n), players' info (Palyers* palyers), order of players (int* order)and which round it is (int round)
   // the main purpose of this function is to find out who wins the game/round and output it
+  // this function return false if there is only one winner. Otherwise, if there are no winner or more than one winners, it returns true.
   ofstream fout;
   fout.open("result.txt", ios::app);
   string finalwinner;
