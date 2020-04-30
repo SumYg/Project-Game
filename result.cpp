@@ -89,13 +89,16 @@ bool result(int &n, Palyers* palyers, int* order,int round) {
   if (winner==1){
     for (int i=0;i<n;i++){
       if (palyers[order[i]].won==round){
+        fout<<palyers[order[i]]<<" wins round "<<round<<endl;
+        fout<<palyers[order[i]].name<<" is the final winner!! Congratulation !!"<<endl;
         ifstream fin;
         fin.open("result.txt");
+        cout<<palyers[order[i]]<<" wins round "<<round<<endl;
         while (getline(fin, finalwinner))
           cout << finalwinner << endl;
         fin.close();
         fout.close();
-        cout<<palyers[order[i]].name<<" is the final winner!! Congratulation !!"<<endl;
+        
         return false;
       }
     }
