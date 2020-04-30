@@ -28,5 +28,21 @@ There are three main parts in this program, initialization (i.e. input of the nu
 
 The codes corresponding to these three parts are separated into different files for better coding and debugging. Long functions may also be separated if necessary.
 
+## Compilation and Execution Instructions
+## Compilation
+Enter the following command in the terminal to compile the program:
+```
+$ make gp87game
+```
+## Execution
+Enter the following command in the terminal to execute:
+```
+$ ./gp87game
+```
+## Cleaning up
+If you want to play the game again after the program ends. Please enter the following command line before your next compilation and execution:
+```
+make clean
+```
 ## Remarks
 Some ideas of this card game come from Blackjack and Thirty-one.
