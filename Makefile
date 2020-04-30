@@ -17,6 +17,6 @@ gp87game: main.o initialization.o gamestage.o result.o
 	g++ $(FLAGS) $^ -o $@
 
 clean:
-	rm -f gp87game main.o initialization.o result.o gamestage.o result.txt project.tgz
+	rm -f gp87game main.o initialization.o result.o gamestage.o result.txt
 
 .PHONY: clean
