@@ -61,6 +61,7 @@ bool result(int &n, Palyers* palyers, int* order,int round) {
       palyers[order[i]].won+=1;
       finalwinner += palyers[order[i]].name + ", ";
     }
+    palyers[order[i]].tail = NULL;
     usleep(870000);
   }
   if (winner > 1) {
