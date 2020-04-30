@@ -42,7 +42,7 @@ $ ./gp87game
 ### Cleaning up
 If you want to play the game again after the program ends, please enter the following command line before your next compilation and execution:
 ```
-make clean
+$ make clean
 ```
 ## Remarks
 Some ideas of this card game come from Blackjack and Thirty-one.
