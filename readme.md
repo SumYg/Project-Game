@@ -28,6 +28,8 @@ There are three main parts in this program, initialization (i.e. input of the nu
 
 The codes corresponding to these three parts are separated into different files for better coding and debugging. Long functions may also be separated if necessary.
 
+## Non-standard C/C++ libraries
+There isn't any non-standard C/C++ libraries used in this project.
 ## Compilation and Execution Instructions
 ### Compilation
 Enter the following command in the terminal to compile the program:
