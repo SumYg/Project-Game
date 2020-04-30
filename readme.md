@@ -40,7 +40,7 @@ Enter the following command in the terminal to execute:
 $ ./gp87game
 ```
 ### Cleaning up
-If you want to play the game again after the program ends. Please enter the following command line before your next compilation and execution:
+If you want to play the game again after the program ends, please enter the following command line before your next compilation and execution:
 ```
 make clean
 ```
