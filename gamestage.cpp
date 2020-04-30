@@ -6,7 +6,7 @@
 using namespace std;
 
 void insert_card(string number, int index, Palyers *palyers) {
-  // this function is to add a card to a player's hand
+  // this function is to add a card to a player's hand and changes the players' handcards, nothing will be outputted 
   Node *p = new Node;
   p->next = NULL;
   p->hand = number;
@@ -32,7 +32,7 @@ Node * find(Node *handcards,string discard){
 }
 
 void delete_card(Node * &handcards, Node * &tail, string discard){
-  // this fumction is to delete a certain card from a player's hand
+  // this function is to delete a certain card from a player's hand
   Node * current=handcards;
   if (current->hand == discard){
     handcards = handcards->next;
@@ -57,7 +57,7 @@ void delete_card(Node * &handcards, Node * &tail, string discard){
 }
 
 string transform(int num) {
-  // this function is to transform the number to a correct symbol for the cards
+  // this function is to transform the number to a correct symbol for the cards and return the string of that symbol
   switch (num) {
     case 1:
       return "A";
@@ -73,7 +73,7 @@ string transform(int num) {
 }
 
 void print_hand(int index, Palyers *palyers) {
-  // this function prints the hand of the player
+  // this function output the hand of the player 
   cout <<  "Your current hand cards:" << endl;
   if (palyers[index].tail != NULL)
     for (Node *head = palyers[index].handcards; head != NULL; head = head->next)
@@ -82,6 +82,9 @@ void print_hand(int index, Palyers *palyers) {
 }
 
 void gamestage(int n, Palyers* palyers, int* order) {
+  // this is the main function for the gamestage section of the game
+  // this functions takes in the number of players (int &n), players' info (Palyers* palyers), order of players (int* order)
+  // this function also outputs different options to let players choose whether to draw or discard a card
   int option;
   srand(time(NULL));
   int cards;
