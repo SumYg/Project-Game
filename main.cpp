@@ -9,7 +9,7 @@ int main() {
   Palyers palyers[4];
   int n, round=1;
   cout << "Welcome to group 87 game!" << endl;
-  cout << "Please enter the number of players: ";
+  cout << "Please enter the number of players (2-4): ";
   cin >> n;
   int *order= new int [n];
   
