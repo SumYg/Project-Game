@@ -13,13 +13,10 @@ result.o: result.cpp $(STRUCT)
 main.o: main.cpp functions.h $(STRUCT)
 	g++ $(FLAGS) -c $<
 
-main: main.o initialization.o gamestage.o result.o
+gp87game: main.o initialization.o gamestage.o result.o
 	g++ $(FLAGS) $^ -o $@
 
-tar:
-	tar -czvf project.tgz *.cpp *.h
-
 clean:
-	rm -f main main.o initialization.o result.o gamestage.o result.txt project.tgz
+	rm -f gp87game main.o initialization.o result.o gamestage.o result.txt project.tgz
 
-.PHONY: clean tar
+.PHONY: clean
