@@ -14,16 +14,18 @@ void sorted(int* num, int n) {
         --i;
         break;
       }
-} // sort the given array with length n
+} // sort the given array with length n, the array is passed by pointer and no return for this function
 
 int find(int target, int* list, int n) {
   for (int i = 0; i < n; ++i)
     if (list[i] == target)
       return i;
   return 87;
-}// find target in the given array
+}// find target in the given array with length n, the array is passed by pointer and return the index of target in the array
 
 void initialization(int n, Palyers* palyers, int* order) {
+  // this function is to draw random cards to each players of the next round and rearrange their order according to their card number
+  // the number of their cards and the order of next round are shown to the screen
   bool randomnum[10] = {};
   srand(time(NULL));
   int *num = new int [n];
@@ -49,7 +51,6 @@ void initialization(int n, Palyers* palyers, int* order) {
   for (int i = 0; i < n; ++i) {
     order[i] = temp_order[find(new_num[i], num, n)];
     cout << palyers[order[i]].name << ((i < n-1)? " >> ": "\n");
-    palyers[order[i]].tail = NULL;
   }
   sleep(1);
   delete[] num, new_num, temp_order;
