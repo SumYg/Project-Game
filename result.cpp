@@ -68,12 +68,6 @@ bool result(int &n, Palyers* palyers, int* order, int round) {
     usleep(870000);
   }
 
-  if (winner > 1) {
-    finalwinner.pop_back();
-    finalwinner.pop_back();
-    fout << finalwinner <<" win round "<< round << endl;
-  }
-
   if (winner==0){
     for (int i=0;i<n;i++){
       palyers[order[i]].won+=1;
@@ -103,6 +97,10 @@ bool result(int &n, Palyers* palyers, int* order, int round) {
       }
     }
   }
+  
+  finalwinner.pop_back();
+  finalwinner.pop_back();
+  fout << finalwinner <<" win round "<< round << endl;
 
   if (winner == 2){
     if (n==2){
