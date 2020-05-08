@@ -2,7 +2,6 @@
 #include "functions.h"
 #include "palyer.h"
 #include <string>
-#include <fstream>
 using namespace std;
 
 int main() {
