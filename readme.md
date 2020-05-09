@@ -41,8 +41,13 @@ Enter the following command in the terminal to execute:
 ```
 $ ./gp87game
 ```
+### Playing one more time
+If you find the game interesting and want to play again, enter the following command in the terminal:
+```
+$ make again
+```
 ### Cleaning up
-If you want to play the game again after the program ends, please enter the following command line before your next compilation and execution:
+If you want to delete all the files generated during the compilation and execution, please enter the following command line:
 ```
 $ make clean
 ```
