@@ -20,7 +20,7 @@ clean:
 	rm -f gp87game main.o initialization.o result.o gamestage.o result.txt
 
 again:
-	rm result.txt
+	rm -f result.txt
 	./gp87game
 
 .PHONY: clean again
