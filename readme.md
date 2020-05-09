@@ -47,7 +47,7 @@ If you find the game interesting and want to play again, enter the following com
 $ make again
 ```
 ### Cleaning up
-If you want to delete all the files generated due to compilation and program , please enter the following command line:
+If you want to delete all the files generated due to compilation and program operation, please enter the following command line:
 ```
 $ make clean
 ```
