@@ -19,4 +19,8 @@ gp87game: main.o initialization.o gamestage.o result.o
 clean:
 	rm -f gp87game main.o initialization.o result.o gamestage.o result.txt
 
-.PHONY: clean
+again:
+	rm result.txt
+	./gp87game
+
+.PHONY: clean again
