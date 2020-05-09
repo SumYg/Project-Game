@@ -14,7 +14,7 @@ void sorted(int* num, int n) {
         --i;
         break;
       }
-} // sort the given array with length n, the array is passed by pointer and no return for this function
+} // sort the given array in descending order with length n, the array is passed by pointer and no return for this function
 
 int find(int target, int* list, int n) {
   for (int i = 0; i < n; ++i)
