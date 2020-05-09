@@ -24,8 +24,8 @@ int find(int target, int* list, int n) {
 }// find target in the given array with length n, the array is passed by pointer and return the index of target in the array
 
 void initialization(int n, Palyers* palyers, int* order) {
-  // this function is to draw random cards to each players of the next round and rearrange their order according to their card number
-  // the number of their cards and the order of next round are shown to the screen
+  // this function is to draw random cards to each players of the next round and rearrange their order according to their card distributed
+  // the rank of their cards and the order of next round are shown to the screen
   // this functions takes in the number of players (int n), players' info (Palyers* palyers) and order of players (int* order)
   bool randomnum[10] = {};
   srand(time(NULL));
