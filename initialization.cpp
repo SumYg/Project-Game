@@ -32,7 +32,7 @@ void initialization(int n, Palyers* palyers, int* order) {
   int *num = new int [n];
 
   cout << "Drawing random cards......." << endl;
-  for (int i=0; i< n; ++i) {
+  for (int i = 0; i< n; ++i) {
     sleep(1);
     int random = rand() %10;
     while (randomnum[random] !=0)
