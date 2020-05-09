@@ -28,7 +28,7 @@ There are three main parts in this program, initialization (i.e. input of the nu
 
 The codes corresponding to these three parts are separated into different files for better coding and debugging.
 
-## Non-standard C/C++ libraries
+## Non-Standard C/C++ Libraries
 There isn't any non-standard C/C++ libraries used in this project.
 ## Compilation and Execution Instructions
 ### Compilation
